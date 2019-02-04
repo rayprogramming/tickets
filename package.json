@@ -1,6 +1,6 @@
 {
     "name": "@rayprogramming/tickets",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "A ticketing system using vue. The backend is currently expected to be a laravel 5.7 paginated route.",
     "private": false,
     "main": "./dist/Tickets.common.js",
