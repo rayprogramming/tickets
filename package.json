@@ -1,19 +1,71 @@
 {
-  "name": "@rayprogramming/tickets",
-  "version": "1.0.0",
-  "description": "A ticketing system using vue. The backend is currently expected to be a laravel 5.7 paginated route.",
-  "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rayprogramming/tickets.git"
-  },
-  "author": "James Ray <james@rayprogramming.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/rayprogramming/tickets/issues"
-  },
-  "homepage": "https://github.com/rayprogramming/tickets#readme"
+    "name": "@rayprogramming/tickets",
+    "version": "0.1.0",
+    "description": "A ticketing system using vue. The backend is currently expected to be a laravel 5.7 paginated route.",
+    "private": false,
+    "main": "./dist/Tickets.common.js",
+    "scripts": {
+        "serve": "vue-cli-service serve",
+        "build": "vue-cli-service build",
+        "bundle": "vue-cli-service build --target lib --name Tickets ./src/components/index.js",
+        "lint": "vue-cli-service lint"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/rayprogramming/tickets.git"
+    },
+    "author": "James Ray <james@rayprogramming.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/rayprogramming/tickets/issues"
+    },
+    "homepage": "https://github.com/rayprogramming/tickets#readme",
+    "dependencies": {
+        "axios": "^0.18.0",
+        "material-design-icons-iconfont": "^4.0.4",
+        "terser": "^3.14.1",
+        "vue": "^2.5.22",
+        "vue-axios": "^2.1.4",
+        "vuetify": "^1.4.4"
+    },
+    "devDependencies": {
+        "@vue/cli-plugin-babel": "^3.4.0",
+        "@vue/cli-plugin-eslint": "^3.4.0",
+        "@vue/cli-service": "^3.4.0",
+        "babel-eslint": "^10.0.1",
+        "eslint": "^5.8.0",
+        "eslint-plugin-vue": "^5.0.0",
+        "vue-template-compiler": "^2.5.21"
+    },
+    "eslintConfig": {
+        "root": true,
+        "env": {
+            "node": true
+        },
+        "extends": [
+            "plugin:vue/essential",
+            "eslint:recommended"
+        ],
+        "rules": {},
+        "parserOptions": {
+            "parser": "babel-eslint"
+        }
+    },
+    "postcss": {
+        "plugins": {
+            "autoprefixer": {}
+        }
+    },
+    "files": [
+        "dist/*",
+        "src/*",
+        "public/*",
+        "*.json",
+        "*.js"
+    ],
+    "browserslist": [
+        "> 1%",
+        "last 2 versions",
+        "not ie <= 8"
+    ]
 }
