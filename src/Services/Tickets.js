@@ -1,12 +1,23 @@
 import axios from 'axios'
-var route_version = "V1"
-var route = "http://localhost:8000/api/" + route_version + "/tickets"
+import Ticket from 'Tickets'
+import Tickets from 'Collections/Tickets'
+import UrlStringify from 'Util/UrlStringify'
+var route = "http://localhost:8000/"
+var TicketCollection = new Tickets();
 
 export default {
-    getTickets() {
+    getTickets(pagination) {
+        let route = Ticket.url
+        let modifer = UrlStringify(pagination)
+        if (modifer.length > 0){
+            route+="?"+modifer
+        }
+
         return axios.get(route)
             .then(response => {
-                return response.data
+                this.loading = false
+                TicketCollection.update(response.data)
+                return TicketCollection
             })
     },
 

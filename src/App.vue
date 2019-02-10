@@ -2,18 +2,16 @@
 <div app id="app">
         <img alt="Vue logo" src="./assets/logo.png">
     <v-app>
-        <HelloWorld />
+        <TicketsDataTable />
     </v-app>
 </div>
 </template>
 
 <script>
-import HelloWorld from './components/DataTable.vue'
 
 export default {
     name: 'app',
     components: {
-        HelloWorld
     }
 }
 </script>
